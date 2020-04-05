@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+         table {
+           border-collapse: collapse;
+           width: 60%;
+         }
+         
+         th, td,thead {
+           text-align: left;
+           padding: 8px;
+         }
+         
+         tr:nth-child(even){background-color: #f2f2f2}
+         
+         thead {
+           background-color: #4CAF50;
+           color: white;
+         }
+         p.serif {
+        font-family: "Times New Roman", Times, serif;
+     }
+
+      p.sansserif {
+      font-family: Arial, Helvetica, sans-serif;
+     }
+     h1 {
+       font-size: 40px;
+    }
+
+         </style>
+   </head>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Address</td>
+            <td>city</td>
+            <td>StudentNo:</td>
+            <td>Id</td>
+            <td>gift</td>
+            <td>description</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{row["city"]}}</td>
+               <td>{{row['pin']}}</td>
+               <td>{{row['ID']}}</td>
+               <td>{{row['GIFT']}}</td>
+               <td>{{row['DESCRIPTION']}}</td>	
+            </tr>
+            <h1 style="background-color:DodgerBlue;">CONGRATULATIONS {{row["name"]}} WON!!!</h1>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+     
+   </body>
+</html>

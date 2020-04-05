@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style> 
+        p.test1 {
+          white-space: nowrap; 
+          width: 200px; 
+          border: 1px solid #000000;
+          overflow: hidden;
+          text-overflow: clip;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color:Tomato;
+          font-size: large;
+          font-weight: bold;
+        }
+        
+        p.test2 {
+          white-space: nowrap; 
+          width: 200px; 
+          border: 1px solid #000000;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color:Tomato;
+          font-size: large;
+          font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+
+<h2 style="background-color:DodgerBlue;">Student Scholarship</h2>
+
+
+
+<p class="test1"><a href="{{ url_for('new_student') }}">Enter Student details </a></p>
+
+
+
+
+<p class="test1"><a href="{{ url_for('list') }}">Show List </a></p>
+
+<p class="test1"><a href="{{ url_for('random') }}">Surprise </a></p>
+
+
+
+
+
+</body>
+</html>
